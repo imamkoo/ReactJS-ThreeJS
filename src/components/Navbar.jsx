@@ -6,11 +6,20 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 10px;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+  } ;
 `;
 
 const Section = styled.div`
   display: flex;
   justify-content: center;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    padding: 10px;
+  } ;
 `;
 
 const Links = styled.div`
@@ -24,6 +33,10 @@ const List = styled.ul`
   gap: 50px;
   list-style: none;
   padding-left: 40px;
+
+  @media only screen and (max-width: 768px) {
+    display: none;
+  } ;
 `;
 
 const ListItem = styled.li`

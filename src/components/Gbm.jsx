@@ -12,6 +12,11 @@ const Container = styled.div`
   width: 1200px;
   display: flex;
   justify-content: space-between;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+  } ;
 `;
 
 const Section = styled.div`
@@ -19,10 +24,13 @@ const Section = styled.div`
   scroll-snap-align: center;
   display: flex;
   justify-content: center;
+  position: relative;
+  /* color: black; */
 `;
 
 const Left = styled.div`
   flex: 1;
+  position: relative;
 `;
 
 const Right = styled.div`
@@ -30,6 +38,12 @@ const Right = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+    padding: 20px;
+  } ;
 `;
 
 const List = styled.div`
@@ -45,6 +59,12 @@ const ListItem = styled.div`
   color: transparent;
   -webkit-text-stroke: 1px white;
   position: relative;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 24px;
+    color: #ffaacf;
+    -webkit-text-stroke: 0;
+  }
 
   ::after {
     content: "${(props) => props.text}";

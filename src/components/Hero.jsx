@@ -5,11 +5,18 @@ import { Canvas } from "@react-three/fiber";
 import { MeshDistortMaterial, OrbitControls, Sphere } from "@react-three/drei";
 
 const Container = styled.div`
-  height: 100vh;
+  height: 100%;
   scroll-snap-align: center;
   width: 1200px;
   display: flex;
   justify-content: space-between;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+    align-item: center;
+    justify-content: center;
+  } ;
 `;
 
 const Section = styled.div`
@@ -20,11 +27,20 @@ const Section = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+
+  @media only screen and (max-width: 768px) {
+    height: 100vh;
+  } ;
 `;
 
 const Right = styled.div`
   flex: 3;
   position: relative;
+
+  @media only screen and (max-width: 768px) {
+    flex: 2;
+    width: 100%;
+  } ;
 `;
 
 const Left = styled.div`
@@ -32,10 +48,20 @@ const Left = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media only screen and (max-width: 768px) {
+    flex: 1;
+    align-items: center;
+  } ;
 `;
 
 const Title = styled.h1`
-  font-size: 68px;
+  font-size: 66px;
+
+  @media only screen and (max-width: 768px) {
+    text-align: center;
+    font-size: 66px;
+  } ;
 `;
 
 const WhatWeDo = styled.div`
@@ -86,6 +112,12 @@ const Img = styled.img`
       transform: translateY(22px);
     }
   }
+
+  @media only screen and (max-width: 768px) {
+    width: 300px;
+    height: 300px;
+    padding-bottom: 20px;
+  } ;
 `;
 
 const Hero = () => {
@@ -94,7 +126,7 @@ const Hero = () => {
       <Navbar />
       <Container>
         <Left>
-          <Title>GANG BOCAH MANTEP</Title>
+          <Title>GANK BOCAH MANTEP</Title>
           <WhatWeDo>
             <Line src="../../public/img/line.png" />
             <Subtitle>GBM 💜</Subtitle>
